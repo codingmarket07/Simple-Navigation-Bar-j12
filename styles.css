@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #3F4656;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper .menu{
+  width: 395px;
+  height: 65px;
+  padding: 0 10px;
+  background: #171C28;
+  border-radius: 3px;
+}
+
+.wrapper .menu ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .menu ul li{
+  width: 75px;
+  padding: 23px 0px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper .menu ul li .fas{
+  color: #6C7486;
+  font-size: 18px; 
+  transition: all 0.5s ease;
+}
+
+.wrapper .menu ul li p{
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #E4ECFA;
+}
+
+.wrapper .menu ul li:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  background: #E4ECFA;
+  z-index: -1;
+  border-radius: 3px;
+}
+
+.wrapper .menu ul li:hover .fas{
+  color: #99A3BA;
+}
+
+.wrapper .menu ul li.active{
+  margin-top: -25px;
+}
+
+.wrapper .menu ul li.active .fas{
+  font-size: 20px;
+  color: #275EFE;
+}
+
+.wrapper .menu ul li.active p{
+  top: 90%;
+}
